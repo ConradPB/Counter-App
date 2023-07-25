@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 
 
 const increment = () => {
@@ -24,3 +24,14 @@ const counterReducer = (state = initialState, action) => {
 } 
 
 const store = configureStore(counterReducer);
+
+const render = () => {
+    ReactDOM.render(
+      <CounterApp 
+        state={store.getState()}
+      />,
+      document.getElementById('root')
+    )
+  }
+  render();
+  store.subscribe(render);
