@@ -35,3 +35,24 @@ const render = () => {
   }
   render();
   store.subscribe(render);
+
+function CounterApp(props) {
+  
+  const state = props.state;
+
+  const onIncrementButtonClicked = () => {
+    store.dispatch(increment());
+  }
+ 
+  const onDecrementButtonClicked = () => {
+    store.dispatch(decrement());
+  }
+  
+  return (   
+    <div>
+      <h1> {state} </h1>
+      <button onClick={onIncrementButtonClicked}>+</button> 
+      <button onClick={onDecrementButtonClicked}>-</button>
+    </div>
+  )
+}
