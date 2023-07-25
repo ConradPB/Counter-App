@@ -23,7 +23,8 @@ const counterReducer = (state = initialState, action) => {
   }
 } 
 
-const store = configureStore(counterReducer);
+const store = configureStore({ reducer: counterReducer });
+
 
 const render = () => {
     ReactDOM.render(
