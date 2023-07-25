@@ -56,3 +56,5 @@ function CounterApp(props) {
     </div>
   )
 }
+
+export { store };

@@ -1,0 +1,14 @@
+#root {
+    text-align: center;
+    font-size: 25px;
+  }
+  
+  button {
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+  }
+  
+  p {
+    margin-bottom: 5px;
+  }
