@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit'
 
 
 const increment = () => {
@@ -23,4 +23,4 @@ const counterReducer = (state = initialState, action) => {
   }
 } 
 
-const store = createStore(counterReducer);
+const store = configureStore(counterReducer);
